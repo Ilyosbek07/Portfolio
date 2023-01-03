@@ -4,7 +4,7 @@ from django.db import models
 class PortfolioModel(models.Model):
     name = models.CharField(max_length=55, null=True, blank=True)
     description = models.CharField(max_length=55, null=True, blank=True)
-    # images = models.ImageField()
+    images = models.ImageField()
     link = models.URLField()
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -15,7 +15,7 @@ class PortfolioModel(models.Model):
 class ReviewsModel(models.Model):
     name = models.CharField(max_length=155)
     job = models.CharField(max_length=55)
-    # image = models.ImageField()
+    image = models.ImageField()
     review = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
